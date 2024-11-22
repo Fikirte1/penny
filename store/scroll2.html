@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrolling Text</title>
+    <style>
+        .marquee-section {
+            width: 100%;
+            overflow: hidden;
+            background: white;
+            color:black;
+            position: relative;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .marquee-text {
+            position: absolute;
+            white-space: nowrap;
+            opacity: 0;
+            animation-timing-function: ease-in-out;
+        }
+
+        .marquee-text-1 {
+            animation: text1Animation 10s linear infinite;
+            margin-bottom: 4%;
+        }
+
+        .marquee-text-2 {
+            animation: text2Animation 10s linear infinite;
+        }
+
+        @keyframes text1Animation {
+            0% {
+                transform: translateX(-100%) translateY(50%);
+                opacity: 0;
+            }
+            25% {
+                transform: translateX(0%) translateY(0%);
+                opacity: 1;
+            }
+            50% {
+                transform: translateX(0%) translateY(-50%);
+                opacity: 1;
+            }
+            100% {
+                transform: translateX(0%) translateY(-50%);
+                opacity: 1;
+            }
+        }
+
+        @keyframes text2Animation {
+            0% {
+                transform: translateX(100%) translateY(50%);
+                opacity: 0;
+            }
+            25% {
+                transform: translateX(0%) translateY(0%);
+                opacity: 1;
+            }
+            50% {
+                transform: translateX(0%) translateY(-50%);
+                opacity: 1;
+            }
+            100% {
+                transform: translateX(0%) translateY(-50%);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<section class="marquee-section">
+    <p class="marquee-text marquee-text-1">First scrolling text coming from the left!</p>
+    <p class="marquee-text marquee-text-2">Second scrolling text coming from the right!</p>
+</section>
+
+<script>
+    // Stop the animation when it reaches the center of the section
+    const marqueeText1 = document.querySelector('.marquee-text-1');
+    const marqueeText2 = document.querySelector('.marquee-text-2');
+    const marqueeSection = document.querySelector('.marquee-section');
+
+    const midPoint = marqueeSection.clientWidth / 2;
+
+    // Function to stop animation
+    function stopAnimation() {
+        marqueeText1.style.animationPlayState = 'paused';
+        marqueeText2.style.animationPlayState = 'paused';
+    };
+
+    marqueeText1.addEventListener('animationiteration', stopAnimation);
+    marqueeText2.addEventListener('animationiteration', stopAnimation);
+</script>
+
+</body>
+</html>

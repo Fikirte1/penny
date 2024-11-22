@@ -1,0 +1,131 @@
+<section class="sect7">
+  <footer id="fot" class="footer p-5">
+     <div class="container">
+        <div class="row">
+           <div class="col-md-4">
+              <h5 class="footer-heading">About Us</h5>
+              <p class="footer-text">Penny Juice</p>
+              <p class="footer-text">Penny Juice</p>
+           </div>
+           <div class="col-md-4">
+              <h5 class="footer-heading">Contact Us</h5>
+              <address class="footer-text">
+                 <p>Email: info@example.com</p>
+                 <p>Phone: +1233567890</p>
+                 <p>Address: 123 Street, City, Country</p>
+                <h3> <p class="copyright">© 2024 Your Website. All rights reserved.</p></h3>
+              </address>
+           </div>
+           <div class="col-md-4">
+              <h5 class="footer-heading">Follow Us</h5>
+              <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+           </div>
+        </div>
+     </div>
+  </footer>
+</section>
+
+
+
+
+let Player1 = "Player 1";
+let Player2 = "Player 2";
+
+function rollTheDice() {
+    let diceNum1 = document.querySelector("#img1");
+    let diceNum2 = document.querySelector("#img2");
+
+    diceNum1.setAttribute("src", "assets/dice.gif");
+    diceNum2.setAttribute("src", "assets/dice.gif");
+
+    let result = document.querySelector('h1');
+
+    setTimeout(() => {
+        let randomNumber1 = Math.floor(Math.random() * 6) + 1;
+        let randomNumber2 = Math.floor(Math.random() * 6) + 1;
+
+        diceNum1.setAttribute('src', 'assets/dice' + randomNumber1 + '.png');
+        diceNum2.setAttribute('src', 'assets/dice' + randomNumber2 + '.png');
+
+        if (randomNumber1 === randomNumber2) {
+            result.innerHTML = "It's a Draw!";
+        } else if (randomNumber1 < randomNumber2) {
+            result.innerHTML = Player2 + " wins!";
+        } else {
+            result.innerHTML = Player1 + " wins!";
+        }
+    }, 2.5);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer {
+   background-color: #333;
+   color: white;
+   padding: 40px 0;
+   font-family: Arial, sans-serif;
+}
+
+.footer-heading {
+   color: white;
+   font-size: 18px;
+   margin-bottom: 20px;
+}
+
+.footer-text {
+   color: white;
+   font-size: 14px;
+   margin-bottom: 10px;
+}
+
+.footer-text p {
+   margin: 0;
+}
+
+.social-icon {
+   color: white;
+   font-size: 24px;
+   margin-right: 10px;
+   transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+   color: #007bff;
+}
+
+.copyright {
+   margin-top: 20px;
+   font-size: 12px;
+   color: #ccc;
+}
+p{
+   color: white;
+}
+.copyright{
+   color: white;
+}
+
+.addre i {
+    font-style: normal;
+}

@@ -1,0 +1,244 @@
+  document.getElementById("seeMoreLink").addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent the default link behavior
+
+    // Array of card data (you can add more card details here)
+    const newCards = [
+        {
+            imgSrc: "images/new-juice1.jpg",
+            title: "GRAPE JUICE",
+            text: "A tasty and refreshing juice, perfect for all occasions.",
+            price: "$5.99",
+            modalTarget: "#grapeModal"
+        },
+        {
+            imgSrc: "images/new-juice2.jpg",
+            title: "PEACH JUICE",
+            text: "A sweet and tangy juice, great for summer days.",
+            price: "$6.50",
+            modalTarget: "#peachModal"
+        },
+        // Add more cards as needed
+    ];
+
+    const container = document.getElementById("additionalCardsContainer");
+
+    newCards.forEach(card => {
+        // Create card element
+        const cardElement = document.createElement("div");
+        cardElement.classList.add("col");
+
+        cardElement.innerHTML = `
+         <div class="container text-center">
+         <div class="row row-cols-auto">
+                 <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img src="${card.imgSrc}" class="card-img-top" alt="${card.title}">
+                <div class="card-body">
+                    <h5 class="card-title">${card.title}</h5>
+                    <p class="card-text">${card.text}</p>
+                </div>
+                <h1>${card.price}</h1>
+                <div class="card-body">
+                    <a href="#" class="bttn" data-toggle="modal" data-target="${card.modalTarget}">READ MORE</a>
+                </div>
+            </div>
+           </div>
+            <div class="col">
+             <div class="card" style="width: 18rem;">
+                <img src="${card.imgSrc}" class="card-img-top" alt="${card.title}">
+                <div class="card-body">
+                    <h5 class="card-title">${card.title}</h5>
+                    <p class="card-text">${card.text}</p>
+                </div>
+                <h1>${card.price}</h1>
+                <div class="card-body">
+                    <a href="#" class="bttn" data-toggle="modal" data-target="${card.modalTarget}">READ MORE</a>
+                </div>
+            </div>
+             </div>
+            <div class="col">
+             <div class="card" style="width: 18rem;">
+                <img src="${card.imgSrc}" class="card-img-top" alt="${card.title}">
+                <div class="card-body">
+                    <h5 class="card-title">${card.title}</h5>
+                    <p class="card-text">${card.text}</p>
+                </div>
+                <h1>${card.price}</h1>
+                <div class="card-body">
+                    <a href="#" class="bttn" data-toggle="modal" data-target="${card.modalTarget}">READ MORE</a>
+                </div>
+            </div>
+             </div>
+            <div class="col">
+             <div class="card" style="width: 18rem;">
+                <img src="${card.imgSrc}" class="card-img-top" alt="${card.title}">
+                <div class="card-body">
+                    <h5 class="card-title">${card.title}</h5>
+                    <p class="card-text">${card.text}</p>
+                </div>
+                <h1>${card.price}</h1>
+                <div class="card-body">
+                    <a href="#" class="bttn" data-toggle="modal" data-target="${card.modalTarget}">READ MORE</a>
+                </div>
+            </div>
+            </div
+            </div>
+        `;
+
+        // Append card to container
+        container.appendChild(cardElement);
+    });
+
+    // Optionally, you can hide the "See More" link after the cards are added
+    document.getElementById("seeMoreLink").style.display = "none";
+});
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="sec5">
+    <div class="container text-center">
+        <h1>Testimonials</h1>
+        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">John Doe</h5>
+                                    <p class="card-text">"Great product! Highly recommend."</p>
+                                    <div class="star-rating">
+                                        &#9733; &#9733; &#9733; &#9733; &#9734;
+                                    </div>
+                                </div>
+                                <div class="card-footer text-center">
+                                    <img src="images/ph.jpg" alt="John Doe" class="testimonial-img">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">Jane Smith</h5>
+                                    <p class="card-text">"Excellent service and quality."</p>
+                                    <div class="star-rating">
+                                        &#9733; &#9733; &#9733; &#9733; &#9733;
+                                    </div>
+                                </div>
+                                <div class="card-footer text-center">
+                                    <img src="images/phh.jpg" alt="Jane Smith" class="testimonial-img">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">Sam Wilson</h5>
+                                    <p class="card-text">"Will definitely buy again."</p>
+                                    <div class="star-rating">
+                                        &#9733; &#9733; &#9733; &#9733; &#9733;
+                                    </div>
+                                </div>
+                                <div class="card-footer text-center">
+                                    <img src="images/phhh.jpg" alt="Sam Wilson" class="testimonial-img">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">Anna Lee</h5>
+                                    <p class="card-text">"Amazing quality and fast delivery."</p>
+                                    <div class="star-rating">
+                                        &#9733; &#9733; &#9733; &#9733; &#9734;
+                                    </div>
+                                </div>
+                                <div class="card-footer text-center">
+                                    <img src="images/pph.jpg" alt="Anna Lee" class="testimonial-img">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <!-- Duplicate and update this row with more testimonials as needed -->
+                        <div class="col-md-3">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">Test User 1</h5>
+                                    <p class="card-text">"Awesome experience!"</p>
+                                    <div class="star-rating">
+                                        &#9733; &#9733; &#9733; &#9733; &#9734;
+                                    </div>
+                                </div>
+                                <div class="card-footer text-center">
+                                    <img src="images/user1.jpg" alt="Test User 1" class="testimonial-img">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">Test User 2</h5>
+                                    <p class="card-text">"Very satisfied!"</p>
+                                    <div class="star-rating">
+                                        &#9733; &#9733; &#9733; &#9733; &#9734;
+                                    </div>
+                                </div>
+                                <div class="card-footer text-center">
+                                    <img src="images/user2.jpg" alt="Test User 2" class="testimonial-img">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">Test User 3</h5>
+                                    <p class="card-text">"Will come back again."</p>
+                                    <div class="star-rating">
+                                        &#9733; &#9733; &#9733; &#9733; &#9733;
+                                    </div>
+                                </div>
+                                <div class="card-footer text-center">
+                                    <img src="images/user3.jpg" alt="Test User 3" class="testimonial-img">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">Test User 4</h5>
+                                    <p class="card-text">"Best purchase ever!"</p>
+                                    <div class="star-rating">
+                                        &#9733; &#9733; &#9733; &#9733; &#9733;
+                                    </div>
+                                </div>
+                                <div class="card-footer text-center">
+                                    <img src="images/user4.jpg" alt="Test User 4" class="testimonial-img">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</section>

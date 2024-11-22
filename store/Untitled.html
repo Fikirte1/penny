@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penny Juice</title>
+    <link rel="stylesheet" href="style/penny.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <style>
+      #slider-animation { max-height: 550px; }
+      .heading-box h2 { width: 100%; color: red; }
+      h2, p { color: #fff; }
+      .car-itm img { width: 100%; }
+      .text-box {
+          position: absolute;
+          top: 50%;
+          left: 15%;
+          right: 15%;
+          color: #000;
+          transform: translateY(-50%);
+          animation-duration: 2s;
+          animation-fill-mode: both;
+      }
+    </style>
+</head>
+<body>
+
+<section class="sec2">
+    <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="container text-center" id="vv">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="text-box animate__animated animate__slideInRight">
+                                <h2>Healthy Juice</h2><br>
+                                <p>We provide a variety of flavors that all kids can enjoy! All the juice concentrates that we sell are compliant with the USDA and FDA guidelines. You don't need to refrigerate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis culpa tenetur et consectetur fuga quia hic libero similique? Ex incidunt porro natus possimus hic officiis expedita unde iste consequatur maxime! Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae voluptates eius sint consectetur? Aspernatur aliquam quidem sequi natus quisquam eius! Quos quaerat ducimus voluptatum molestiae, cumque officia a earum omnis!</p>
+                                <div class="d-grid gap-2 col-6 mx-auto">
+                                    <a class="bttn" href="#">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <img class="hd" src="images/nnn.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container text-center" id="vv">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="text-box animate__animated animate__slideInRight">
+                                <h2>RAINBOWS OF EXISTING FLAVORS</h2><br>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium iusto accusamus est misi blanditiis, tempore unde officia vitae totam laborum fugit, veniam ullam quia nisi blanditiis, tempore unde officia vitae totam laborum fugit, veniam ullam quia nisi blanditiis, tempore unde officia vitae totam laborum fugit, veniam ullam quia.</p>
+                                <div class="d-grid gap-2 col-6 mx-auto">
+                                    <a class="bttn" href="#">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <img class="hd" src="images/fruit-f.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container text-center" id="vv">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="text-box animate__animated animate__slideInRight">
+                                <h2>Another Heading</h2><br>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium iusto accusamus est misi blanditiis, tempore unde officia vitae totam laborum fugit, veniam ullam quia nisi blanditiis, tempore unde officia vitae totam laborum fugit, veniam ullam quia nisi blanditiis, tempore unde officia vitae totam laborum fugit, veniam ullam quia.</p>
+                                <div class="d-grid gap-2 col-6 mx-auto">
+                                    <a class="bttn" href="#">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <img class="hd" src="images/png-rem.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+<script>
+    wow = new WOW({
+        animateClass: 'animated',
+        offset: 100,
+        callback: function(box) {
+            console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+        }
+    });
+    wow.init();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrolling Text</title>
+    <style>
+        .marquee-section {
+            width: 100%;
+            overflow: hidden;
+            background: white;
+            color: black;
+            position: relative;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .marquee-text {
+            position: absolute;
+            white-space: nowrap;
+            opacity: 0;
+            animation-timing-function: ease-in-out;
+        }
+
+        .marquee-text-1 {
+            animation: text1Animation 5s linear forwards;
+        }
+
+        .marquee-text-2 {
+            animation: text2Animation 5s linear forwards;
+        }
+
+        @keyframes text1Animation {
+            0% {
+                transform: translateX(-100%) translateY(50%);
+                opacity: 0;
+            }
+            50% {
+                transform: translateX(0%) translateY(0%);
+                opacity: 1;
+            }
+            100% {
+                transform: translateX(0%) translateY(-50%);
+                opacity: 1;
+            }
+        }
+
+        @keyframes text2Animation {
+            0% {
+                transform: translateX(100%) translateY(50%);
+                opacity: 0;
+            }
+            50% {
+                transform: translateX(0%) translateY(0%);
+                opacity: 1;
+            }
+            100% {
+                transform: translateX(0%) translateY(-50%);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<section class="marquee-section">
+    <p class="marquee-text marquee-text-1">First scrolling text coming from the left!</p>
+    <p class="marquee-text marquee-text-2">Second scrolling text coming from the right!</p>
+</section>
+
+<script>
+    // After animation ends, ensure the text stays in place
+    const marqueeText1 = document.querySelector('.marquee-text-1');
+    const marqueeText2 = document.querySelector('.marquee-text-2');
+
+    marqueeText1.addEventListener('animationend', () => {
+        marqueeText1.style.animation = 'none';
+        marqueeText1.style.transform = 'translateX(0%) translateY(-50%)';
+        marqueeText1.style.opacity = '1';
+    });
+
+    marqueeText2.addEventListener('animationend', () => {
+        marqueeText2.style.animation = 'none';
+        marqueeText2.style.transform = 'translateX(0%) translateY(-50%)';
+        marqueeText2.style.opacity = '1';
+    });
+</script>
+
+</body>
+</html>
